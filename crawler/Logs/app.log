@@ -1,0 +1,12 @@
+19-Jun-21 12:55:59 - result_parser:: Error parsing search results
+19-Jun-21 12:55:59 - update_database:: Error updating database
+19-Jun-21 12:57:20 - PUT http://localhost:9200/yt_videos/videos/RXix4M7pZKY [status:201 request:0.011s]
+19-Jun-21 12:57:20 - PUT http://localhost:9200/yt_videos/videos/_2Tjf1np_1s [status:201 request:0.007s]
+19-Jun-21 12:57:20 - PUT http://localhost:9200/yt_videos/videos/UA-ksj0Dnk0 [status:201 request:0.007s]
+19-Jun-21 12:57:20 - PUT http://localhost:9200/yt_videos/videos/TXKZrUsztio [status:201 request:0.007s]
+19-Jun-21 12:57:20 - PUT http://localhost:9200/yt_videos/videos/7y6b_FaAhis [status:201 request:0.005s]
+19-Jun-21 12:59:50 - PUT http://localhost:9200/yt_videos/videos/En85EEZ9Gmo [status:201 request:0.010s]
+19-Jun-21 12:59:50 - PUT http://localhost:9200/yt_videos/videos/A-djGa5dQvU [status:201 request:0.008s]
+19-Jun-21 12:59:50 - PUT http://localhost:9200/yt_videos/videos/cE4ZmAWIAME [status:201 request:0.006s]
+19-Jun-21 12:59:50 - PUT http://localhost:9200/yt_videos/videos/hqkI40RzsWc [status:201 request:0.005s]
+19-Jun-21 12:59:50 - PUT http://localhost:9200/yt_videos/videos/101DR0Vicds [status:201 request:0.006s]
