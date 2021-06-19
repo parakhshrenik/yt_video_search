@@ -12,9 +12,9 @@ Use the `count` API to fetch the total matches for a given search query. The sai
 
 * [Containers](#containers)
 * [Libraries](#libraries)
-* [Getting started](#how_to)
-    * [Running Elasticsearch](#run_es)
-    * [The Crawler](#crawler)
+* [Getting Started](#how_to)
+    * [Running Elasticsearch](#running-elasticsearch)
+    * [The Crawler](#the-crawler)
     * [APIs](#apis)
 
 
