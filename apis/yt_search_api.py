@@ -8,20 +8,21 @@ app = Flask(__name__)
 es = Elasticsearch(host='localhost', port=9200)
 es = Elasticsearch()
 
-
+#The base api is the /search api 
+# The api expects two paramters : the search_query and the page number
 @app.route('/search', methods= ['GET'])
 def hello_world():
     search_query = request.args.get('search_query')
     page = request.args.get('page')
-    print (search_query)
-    print (page)
     output = get_search_results(search_query, page)
     #output = "test"
     return str(output)
 
+# The /count api returns the total number of videos for a given search_query
 @app.route('/count', methods=['Get'])
 def get_total_count():
     search_query = request.args.get('search_query')
+    # The smart query uses fuzzy match on video title
     smart_query = {
         "query": {
             "match": {
@@ -41,6 +42,7 @@ def get_total_count():
 
 def get_search_results(search_term, page, size=10):
     page = int(page)
+    # The smart query uses fuzzy match on video title
     smart_query =   {
         "query": {
             "match" : {

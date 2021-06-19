@@ -5,6 +5,21 @@ import datetime
 
 logging.basicConfig(level=logging.INFO, filename='Logs/app.log', filemode='a', format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 logger = logging.getLogger('api_examples')
+
+'''
+The YouTubeVideoParser keeps looking for videos based on a search_query
+last_run.txt : Stores the timestamp of the video_published during the last crawl
+This is used as a query during the subsequent calls to avoid getting the same videos in the queries
+The Google API returns 5 videos by default. The response is parsed for the following fields:
+    - Title
+    - Description
+    - Channel Name
+    - Thumbnail URL
+    - Video ID
+
+The above details are added to elasticsearch with keyword as videoId
+'''
+
 class YouTubeVideoParser:
     server = "localhost"
     port_no = 9200
@@ -70,6 +85,7 @@ class YouTubeVideoParser:
 	            }
                 }
             }
+        # Creates an index if it doens't exist with mappings for each field
         self.es.indices.create(index =self.es_index, ignore=400, body = params)
 
 
@@ -94,7 +110,8 @@ class YouTubeVideoParser:
             return results
         except:
             logger.error("result_parser:: Error parsing search results")
-
+    
+    #The below function is responsible for adding the response data to elasticsearch
     def update_database(self, search_results):
         try:
             self.elastic_search_conn()
