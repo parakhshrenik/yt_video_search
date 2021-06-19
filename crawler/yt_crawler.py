@@ -47,6 +47,30 @@ class YouTubeVideoParser:
     def elastic_search_conn(self):
         self.es = Elasticsearch(host=self.server, port=self.port_no)
         self.es = Elasticsearch()
+        mapping = {
+	"mappings": {
+		"videos": {
+			"properties": {
+				"video_title": {
+					"type": "text"
+				},
+				"video_desc": {
+					"type": "text"
+				},
+				"video_thumbnail": {
+					"type": "text"
+				},
+				"video_channel": {
+					"type": "text"
+				},
+				"video_publish_time": {
+					"type": "date"
+		                }
+		        }
+	            }
+                }
+            }
+        self.es.indices.create(index =self.es_index, ignore=400, body = params)
 
 
     def result_parser(self, search_response):
