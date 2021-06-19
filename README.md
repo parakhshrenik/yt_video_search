@@ -1,5 +1,5 @@
 # Kontainerized YouTube Video Search
-**Disclaimer** :This search is just meant for educational purposes or personal use only and not for commercial use. Please go thorugh Google's terms and conditions before using this. The author does not take any responsibility for breach of any Google Terms & Conditions. 
+**Disclaimer** :This search is just meant for educational purposes or personal use only and not for commercial use. Please go through Google's terms and conditions before using this. The author does not take any responsibility for breach of any Google Terms & Conditions. 
 
 With that _out of the way_ let's get started. This is a tool to get YouTube video details based on a keyword. 
 The videos are shown in a paginated and reverse chronological order. 
