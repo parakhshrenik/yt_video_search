@@ -17,7 +17,7 @@ class YouTubeVideoParser:
             "part": "snippet",
             "key": self.get_api_key(),
             "type": "video",
-            "q": "WTC",
+            "q": self.keyword,
             "order": "date",
         }
 
@@ -82,13 +82,4 @@ class YouTubeVideoParser:
 
         except:
             logger.error("update_database:: Error updating database")
-
-yt_parser = YouTubeVideoParser("cricket")
-parse_successful, results = yt_parser.get_latest_videos()
-if parse_successful:
-    # f = open('result.txt', encoding='cp850').read()
-    search_results = yt_parser.result_parser(results)
-    yt_parser.update_database(search_results)
-
-
 
