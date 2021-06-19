@@ -18,12 +18,12 @@ Use the `count` API to fetch the total matches for a given search query. The sai
     * [APIs](#apis)
 
 
-##Containers 
+## Containers 
 The tool has three containers for which the images are build from the base images: 
 - Python:3.8 : This base image is use for both running the crawler and the api exposed to search for videos from the database. 
 - elasticsearch:6.4.0 : This base image is used directly as the database for storing all the relevant search results by the __crawler__
 
-##Libraries 
+## Libraries 
 The following python libraries are used :
 - flask
 - requests
