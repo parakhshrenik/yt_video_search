@@ -40,6 +40,7 @@ def get_total_count():
 
 
 def get_search_results(search_term, page, size=10):
+    page = int(page)
     smart_query =   {
         "query": {
             "match" : {
@@ -51,7 +52,7 @@ def get_search_results(search_term, page, size=10):
         }
     }
     try:
-        res = es.search(index="yt_videos", body=smart_query, sort='video_publish_time:desc', from_=page, size = size)
+        res = es.search(index="yt_videos", body=smart_query, sort='video_publish_time:desc', from_=(page-1)*size, size = size)
         return format_output(res['hits']['hits'])
     except:
         return "We've hit a minor setback. See ya' soon again"
