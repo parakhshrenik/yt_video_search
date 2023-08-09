@@ -4,7 +4,7 @@
 With that _out of the way_ let's get started. This is a tool to get YouTube video details based on a keyword. 
 The videos are shown in a paginated and reverse chronological order. 
 
-Use the `/seach` API to search for the video details. Use `HTTP GET ` to use the same with the following parameters:
+Use the `/search` API to search for the video details. Use `HTTP GET ` to use the same with the following parameters:
  - page : This indicates the page number. The number of videos returned per page is 10
  - search_query : This indicates the search query based on which the response would be provided
  
